@@ -97,9 +97,11 @@ extension points to customize resolution:
 
 #### IDE integration
 
-Each version of Intellij IDEA and Android Studio includes a developer version of the Kotlin compiler. This version is 
-specific to the IDE and is not binary compatible with the released Kotlin compiler. As a result, when you update your IDE,
-your compiler plugin needs changes to work again. For this reason, community plugins aren't loaded by default.
+Resolution changes affect IDE behavior such as code highlighting and suggestions, so it's important
+that your plugin is compatible with the IDE. Each version of Intellij IDEA and Android Studio includes a development version
+of the Kotlin compiler. This version is specific to the IDE and is not binary compatible with the released Kotlin compiler.
+As a result, when you update your IDE, you also need to update your compiler plugin to keep it working. For this reason,
+community plugins aren't loaded by default.
 
 To ensure that your custom compiler plugin works with different IDE versions, test it against each IDE version and fix 
 any issues you find.
